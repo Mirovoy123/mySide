@@ -1,19 +1,17 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+<ion-menu [content]="mainContent">
+  <ion-content style="background:url(assets/img/KogQKx2SLSGRZsm4USPy_no-translate-detected_1164-1491.jpg) no-repeat center;background-size:cover;" id="side-menu21">
+    <ion-list id="menu-list1">
+      <ion-item color="none" menuClose="" on-click="goToGame()" id="menu-list-item1">
+        Game
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToScore()" id="menu-list-item2">
+        Scores
+      </ion-item>
+      <ion-item color="none" menuClose="" on-click="goToGamemode()" id="menu-list-item3">
+        Gamemode
+      </ion-item>
     </ion-list>
   </ion-content>
-
 </ion-menu>
 
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-nav #mainContent [root]="rootPage"></ion-nav>
